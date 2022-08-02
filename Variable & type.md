@@ -119,7 +119,7 @@ public class VariableXcopeExample {
   int intValue = (int)doubleValue; //(변환할 작은 타입) 으로 강제 형변환  
   ```
 
-  > double을 int로 강제 형변환시  소수점 이하 부분은 버려지고, 정수만 저장된다.
+  > double을 int로 강제 형변환 시  소수점 이하 부분은 버려지고, 정수만 저장된다.
 
   
 
