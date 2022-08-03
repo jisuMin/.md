@@ -203,11 +203,11 @@ switch(num) {
 
 ### :mag_right: continue 문
 
-break가 조건 만족시 반복을 중지시킨다면 continue는 조건 만족시 그대로 지나가라는 뜻이다. 이후의 문장을 실행하지 않고 다음 반복으로 넘어가는 것.
+break가 조건 만족시 반복을 중지시킨다면 continue는 조건 만족시 그대로 지나가라는 뜻이다. 이후의 문장을 실행하지 않고 다음 반복으로 넘어간다. 
 
 ```java
 for(int i=0; i<=10; i++) {
-	if(i % 2 == 0) { //만약 홀수인경우
+	if(i % 2 == 0) { //만약 짝수인경우
 		continue;
      }
   System.out.println(i);
