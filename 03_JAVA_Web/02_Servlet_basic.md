@@ -69,7 +69,7 @@ public class ServletFile extends HttpServlet {
 
 - **Servlet 클래스 생성 시 작업**
 
-![스크린샷 2022-08-04 오후 4.02.55](../../../../Library/Application Support/typora-user-images/스크린샷 2022-08-04 오후 4.02.55.png)
+![스크린샷 2022-08-04 오후 4.02.55](Servlet Mapping.png)
 
 - **`web.xml`에 작업**
 
