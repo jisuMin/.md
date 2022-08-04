@@ -17,7 +17,7 @@
 
 ## :mag_right: 1. Servlet 클래스 생성 
 
-![스크린샷 2022-08-04 오후 4.02.22](../../../../Library/Application Support/typora-user-images/스크린샷 2022-08-04 오후 4.02.22.png)
+![스크린샷 2022-08-04 오후 4.02.22](02_Servlet_basic.png)
 
 
 
