@@ -69,7 +69,7 @@ public class ServletFile extends HttpServlet {
 
 - **Servlet 클래스 생성 시 작업**
 
-![스크린샷 2022-08-04 오후 4.02.55](Servlet Mapping.png)
+![스크린샷 2022-08-04 오후 4.02.55](https://github.com/jisuMin/.md/blob/master/03_JAVA_Web/Servlet%20Mapping.png)
 
 - **`web.xml`에 작업**
 
