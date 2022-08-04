@@ -17,7 +17,7 @@
 
 ## :mag_right: 1. Servlet 클래스 생성 
 
-![스크린샷 2022-08-04 오후 4.02.22](02_Servlet_basic.png)
+![스크린샷 2022-08-04 오후 4.02.22](https://github.com/jisuMin/.md/blob/master/02_jQuery/Create%20Servlet.png)
 
 
 
