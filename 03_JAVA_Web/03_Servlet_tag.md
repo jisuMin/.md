@@ -109,8 +109,8 @@ public class RegisterServlet extends HttpServlet {
 
 - 결과 
 
-![스크린샷 2022-08-04 오후 11.58.47](../../../../Desktop/스크린샷 2022-08-04 오후 11.58.47.png)
+![스크린샷 2022-08-04 오후 11.58.47](https://github.com/jisuMin/.md/blob/master/03_JAVA_Web/Images/register_html.png)
 
 - 등록 버튼 클릭 -> RegisterServlet으로 전송
 
-​	![스크린샷 2022-08-05 오전 12.00.47](스크린샷 2022-08-05 오전 12.00.47.png)
+​	![스크린샷 2022-08-05 오전 12.00.47](https://github.com/jisuMin/.md/blob/master/03_JAVA_Web/Images/register_sv.png)
