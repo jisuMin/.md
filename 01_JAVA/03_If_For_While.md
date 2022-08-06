@@ -134,6 +134,34 @@ for(int i=1; i<=100; i++){
 System.out.println("합 : " + sum);
 ```
 
+- 향상된 for문
+  - 향상된 for문은 반복 실행을 하기 위해 카운터 변수와 증감식을 사용하지 않는다.
+
+```java
+for( 타입 변수 : 배열){
+
+  실행문
+}
+```
+
+for문의 괄호()에는 **배열에서 꺼낸 요소를 저장할 변수 선언**, 콜론(:) 그리고 배열을 나란히 작성한다.
+최종적으로 가져올 요소가 없으면 for문이 종료된다.
+
+```java
+public class Arrays {
+    public static void main(String[] args) {
+        int sum = 0;
+        int[] array = {1,2,3};
+        for (int i : array){
+            sum +=i;
+        }
+        System.out.println(sum);
+    }
+}
+```
+
+
+
 ### :mag_right: while문
 
 - for 문이 정해진 횟수만큼 반복한다면, while문은 조건식이 true일 경우 계속해 반복한다.
