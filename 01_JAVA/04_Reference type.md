@@ -15,6 +15,8 @@
 |                           | double                                                       |
 | 논리 타입                 | boolean                                                      |
 
+---
+
 
 
 | 참조 타입(reference type) | 크기를 정할 수 없는 데이터 표현, stack 주소값 저장 구조, heap 참조영역이 실제값 |
@@ -23,6 +25,8 @@
 | 열거 타입                 |                                                              |
 | 클래스                    |                                                              |
 | 인터페이스                |                                                              |
+
+
 
 - 원시 타입으로 선언된 변수와 참조 타입으로 선언된 변수의 차이점 
   - 원시 타입인 byte, char, short, int , long, float, double, boolean을 이용해 선언한 변수에는 실제 값이 저장됨.
