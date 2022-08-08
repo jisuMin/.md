@@ -59,7 +59,7 @@ public class ForwardTest2 extends HttpServlet {
 - 결과 
   - 출력은 `forwardTest2` 에서 했지만 url를 보면 이동을 하지 않았음을 확인할 수 있다.
 
-![스크린샷 2022-08-08 오후 3.23.21](../../../../Library/Application Support/typora-user-images/스크린샷 2022-08-08 오후 3.23.21.png)
+![스크린샷 2022-08-08 오후 3.23.21](Images/api.png)
 
 
 

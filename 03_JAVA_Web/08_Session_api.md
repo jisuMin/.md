@@ -35,7 +35,7 @@ protected void doGet(HttpServletRequest request, HttpServletResponse response) t
 }
 ```
 
-![스크린샷 2022-08-08 오후 5.19.58](../../../../Library/Application Support/typora-user-images/스크린샷 2022-08-08 오후 5.19.58.png)
+![스크린샷 2022-08-08 오후 5.19.58](Images/sessionapi.png)
 
 - 브라우저가 닫기 전 30분 동안 액션 없으면 정보 삭제 : `servers/../web.xml`
 

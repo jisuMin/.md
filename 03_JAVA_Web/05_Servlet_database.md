@@ -243,9 +243,9 @@ public class MemberDAO {
 
 - `id = adm, password = 11`를 입력 : **관리자로 로그인한 경우**
 
-![스크린샷 2022-08-08 오후 4.22.13](../../../../Library/Application Support/typora-user-images/스크린샷 2022-08-08 오후 4.22.13.png)
+![스크린샷 2022-08-08 오후 4.22.13](Images/adm.png)
 
 - `id = Servlet_id1, password = 11`를 입력 : **사용자로 로그인한 경우**
 
-![스크린샷 2022-08-08 오후 4.22.46](../../../../Library/Application Support/typora-user-images/스크린샷 2022-08-08 오후 4.22.46.png)
+![스크린샷 2022-08-08 오후 4.22.46](Images/user.png)
 
