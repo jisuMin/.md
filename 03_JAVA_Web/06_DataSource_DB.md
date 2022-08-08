@@ -65,7 +65,7 @@ public class ConnectionServlet extends HttpServlet {
 ```
 
 - DataSource를 이용한 MemberDAO 작성 
-  - 이전에 [05_Servlet_database]()에서 작성한 DAO와 다름을 확인 
+  - 이전에 [05_Servlet_database](https://github.com/jisuMin/.md/blob/master/03_JAVA_Web/05_Servlet_database.md)에서 작성한 DAO와 다름을 확인 
 
 ```java
 
@@ -85,7 +85,6 @@ public class ConnectionServlet extends HttpServlet {
 			while(rs.next()) {
 				MemberDTO dto = new MemberDTO();
 				dto.setId(rs.getString("id"));
-				//dto.setPassword(rs.getInt("password"));
 				dto.setName(rs.getString("name"));
 				dto.setPhone(rs.getString("phone"));
 				dto.setEmail(rs.getString("email"));
