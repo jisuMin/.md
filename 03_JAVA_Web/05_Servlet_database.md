@@ -3,20 +3,6 @@
 - LoginDBServlet.java
 
 ```java
-import java.io.IOException;
-import java.io.PrintWriter;
-import java.sql.Connection;
-import java.sql.DriverManager;
-import java.sql.PreparedStatement;
-import java.sql.ResultSet;
-import java.sql.SQLException;
-
-import javax.servlet.ServletException;
-import javax.servlet.annotation.WebServlet;
-import javax.servlet.http.HttpServlet;
-import javax.servlet.http.HttpServletRequest;
-import javax.servlet.http.HttpServletResponse;
-
 @WebServlet("/LoginDB")
 public class LoginDBServlet extends HttpServlet {
 	Connection conn =null;
@@ -102,7 +88,7 @@ $(document).ready(function(){
 	
 		if( $("input:text").val() == "adm" ||
 			$("input:text").val() == "administor" ||
-			$("input:text").val() == "administration") {
+			$("input:text").val() == "administrator") {
 			$("input:hidden").val("admin");
 		}else{
 			$("input:hidden").val("user");
@@ -123,3 +109,143 @@ $(document).ready(function(){
 </body>
 
 ```
+
+- MemberDTO
+
+```java
+package dto;
+// JDBC -- MYBATIS
+public class MemberDTO {
+	String id; //varchar(30)
+	int password;
+	String name; //varchar(30)
+	String phone; //char(13)
+	String email;// varchar(30)
+	String regdate; // datetime
+	
+	public String getId() {
+		return id;
+	}
+	public void setId(String id) {
+		this.id = id;
+	}
+	public int getPassword() {
+		return password;
+	}
+	public void setPassword(int password) {
+		this.password = password;
+	}
+	public String getName() {
+		return name;
+	}
+	public void setName(String name) {
+		this.name = name;
+	}
+	public String getPhone() {
+		return phone;
+	}
+	public void setPhone(String phone) {
+		this.phone = phone;
+	}
+	public String getEmail() {
+		return email;
+	}
+	public void setEmail(String email) {
+		this.email = email;
+	}
+	public String getRegdate() {
+		return regdate;
+	}
+	public void setRegdate(String regdate) {
+		this.regdate = regdate;
+	}
+```
+
+- MemberDAO
+
+```java
+public class MemberDAO {
+	//Member 테이블 CRUD
+	public int selectMember(String id, String userpassword) {
+		Connection conn =null;
+		int condition = 0;
+		try {
+		Class.forName("com.mysql.cj.jdbc.Driver");
+		conn = DriverManager.getConnection
+		("jdbc:mysql://127.0.0.1:3306/memberdb", "emp2", "emp2");
+		String sql = "select id, password from member where id=?";
+		PreparedStatement pt = conn.prepareStatement(sql);
+		pt.setString(1, id);
+		ResultSet rs = pt.executeQuery();
+		// sql 실행결과가 여러 개의 레코드이거나, 1개가 검색되도 -> 첫 번째 검색된 것만 출력 
+		// sql 실행결과 0개 
+		
+		String dbid = null, dbpassword= null;
+		if(rs.next()) { // rs.next()가 true인 경우 = id가 존재하는 경우 
+			condition = 1; // id 존재 , password 불일치 
+			dbid = rs.getString("id");
+			dbpassword = rs.getString("password");
+			// id 존재, password 일치 
+			if(dbpassword.equals(userpassword)) {
+				condition =2 ;
+			}
+		}else {
+			condition = 3; // id 존재하지 않음 
+		}
+		}catch (Exception e){
+			e.printStackTrace();
+		}finally {
+			try {
+				conn.close();
+			}catch(SQLException e) {}
+		}
+		return condition;
+	}
+
+	public int insertMember(MemberDTO dto) {
+		Connection conn =null;
+		int condition = 0; //insert한 행의 갯수 
+		
+		try {
+		Class.forName("com.mysql.cj.jdbc.Driver");
+		conn = DriverManager.getConnection
+		("jdbc:mysql://127.0.0.1:3306/memberdb", "emp2", "emp2");
+		String sql = "insert into member values(?,?,?,?,?,now())";	
+		PreparedStatement pt = conn.prepareStatement(sql);		
+		pt.setString(1,dto.getId());
+		pt.setInt(2,dto.getPassword());
+		pt.setString(3,dto.getName());
+		pt.setString(4,dto.getPhone());
+		pt.setString(5,dto.getEmail());
+		condition = pt.executeUpdate();
+		}catch (Exception e){
+			e.printStackTrace();
+		}finally {
+			try {
+				conn.close();
+			}catch(SQLException e) {}
+		}
+		return condition;
+	}
+```
+
+- 실행결과
+
+1. 없는 아이디인 경우 회원가입을 먼저 진행
+
+2. 로그인한 실행 결과를 보기 위해  `adm,11` 과 `Servlet_id1,11`로 회원가입
+
+3. DB에 저장되었는지 확인
+
+   ![스크린샷 2022-08-08 오후 4.24.22](../../../../Library/Application Support/typora-user-images/스크린샷 2022-08-08 오후 4.24.22.png)
+
+4.  결과 확인
+
+- `id = adm, password = 11`를 입력 : **관리자로 로그인한 경우**
+
+![스크린샷 2022-08-08 오후 4.22.13](../../../../Library/Application Support/typora-user-images/스크린샷 2022-08-08 오후 4.22.13.png)
+
+- `id = Servlet_id1, password = 11`를 입력 : **사용자로 로그인한 경우**
+
+![스크린샷 2022-08-08 오후 4.22.46](../../../../Library/Application Support/typora-user-images/스크린샷 2022-08-08 오후 4.22.46.png)
+
