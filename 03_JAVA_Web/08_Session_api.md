@@ -61,7 +61,7 @@ session.setMaxInactiveInterval(5); // 세션의 유효시간을 5초로 설정
 session.setAttribute("name","spring");
 session.setAttribute("cart","computer");
 
-session.removeAttribute("cart") // 세션 id가 cart인 것만 삭제, named은 세션에 남아있음
+session.removeAttribute("cart") // 세션 id가 cart인 것만 삭제, name은 세션에 남아있음
 ```
 
 - 세션 무효화 (소멸) 
