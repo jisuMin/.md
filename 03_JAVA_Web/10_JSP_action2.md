@@ -63,7 +63,3 @@ if(request.getAttribute("dto") != null){ <%-- forward나 include -->
 <jsp:setProperty property="id" name="dto" value="<%=request.getParameter(\"id\") %>"/>
 ```
 
-
-
-## :bulb: 내 정보 수정 useBean으로 생성해보기
-
