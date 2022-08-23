@@ -82,3 +82,5 @@
 		order by id
 	</select>
 ```
+
+> 조회된 결과는 order by를 이용해 id 순으로 정렬한다. 
