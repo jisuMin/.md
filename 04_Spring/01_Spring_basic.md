@@ -28,7 +28,7 @@
 
     
 
-    ![스크린샷 2022-08-16 오후 1.13.15](../../../../Library/Application Support/typora-user-images/스크린샷 2022-08-16 오후 1.13.15.png)
+    ![스크린샷 2022-08-16 오후 1.13.15](Images/spring_basic.png)
 
 
 

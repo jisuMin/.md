@@ -29,7 +29,7 @@
 
 - 다운로드 확인
 
-`Maven Dependencies` 항목에 추가된 것을 확인할 수 있다.  ![스크린샷 2022-08-17 오후 1.35.04](../../../../Library/Application Support/typora-user-images/스크린샷 2022-08-17 오후 1.35.04.png)
+`Maven Dependencies` 항목에 추가된 것을 확인할 수 있다.  ![스크린샷 2022-08-17 오후 1.35.04](Images/maven_dependencies.png)
 
 
 

@@ -21,7 +21,7 @@
 
 - spring xml 파일이 아닌 그냥 xml 파일 생성 `mybatis-config.xml`
 
-![스크린샷 2022-08-19 오후 2.25.40](../../../../Library/Application Support/typora-user-images/스크린샷 2022-08-19 오후 2.25.40.png)
+![스크린샷 2022-08-19 오후 2.25.40](Images/create_xml.png)
 
 - `mybatis-config.xml`에 연결할 db 설정
 
