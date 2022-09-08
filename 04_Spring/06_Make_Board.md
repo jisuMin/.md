@@ -37,8 +37,6 @@
   - 조회수 - viewcount int
   - 작성시간 - wtime datetime now()
 
-
-
 - 작성 쿼리
 
   - member
